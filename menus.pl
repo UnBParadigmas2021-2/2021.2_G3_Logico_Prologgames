@@ -64,7 +64,7 @@ menu_publisher:-
     write('Selecione o Editora'),nl,
     setof(X,publisher(X),L),
     (display(L,0);true),
-    write('0 - Nao especificar'),
+    write('0 - Nao especificar'), nl,
     write('--------------------------------------'),nl,
     write('Digite o numero da editora'),nl,
     read_string(user, "\n", "\r", _, Option),

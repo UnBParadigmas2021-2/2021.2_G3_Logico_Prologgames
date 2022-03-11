@@ -7,6 +7,8 @@ start:- main_menu.
 preferences:- 
     menu_category, 
     menu_genre,
+    menu_developer,
+    menu_publisher,
     show_recommendation.
 
 show_recommendation:-
@@ -26,11 +28,12 @@ show_recommendation:-
             description)
 */
 
-find_games(Id):- game(Id, _, _, _, _, H, Y, _, _, _), 
+find_games(Id):- game(Id, _, Dev,Pub, _, Cat, Gen, _, _, _), 
     nb_getval(user_category, Selected_category),
     nb_getval(user_genre, Selected_genre),
-    member(Selected_category, H), 
-    member(Selected_genre, Y).
-
-
-
+    nb_getval(user_publisher, Selected_publisher),
+    nb_getval(user_developer, Selected_developer),
+    member(Selected_category, Cat), 
+    member(Selected_genre, Gen),
+    member(Selected_publisher, Pub),
+    member(Selected_developer, Dev).
