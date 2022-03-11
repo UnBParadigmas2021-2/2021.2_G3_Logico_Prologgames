@@ -17,6 +17,7 @@ exit:- write(':) Bye'),nl, halt(0).
 % Salva as escolhas dos usuários em variáveis globais, para ser acessadas por outras regras
 
 save_preference(Local,List,Index):-
+    Index =:= 0 -> (nb_setval(Local, _));
     T is Index-1,
     nth0(T, List, Selected_preference),
     nb_setval(Local, Selected_preference).
