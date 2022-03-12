@@ -52,15 +52,15 @@ menu_category:-
 menu_genre:-
     clear,
     write('Selecione o genero'),nl,
-    setof(X,genre(X),L),
-    (display(L,0);true),
+    setof(GenreName, genre(GenreName), GenreList),
+    (display(GenreList, 0) ; true),
     write('--------------------------------------'),nl,
     write('Digite o numero do genero'),nl,
     read_string(user, "\n", "\r", _, Option),
-    number_string(X, Option),
-    checkinput(X,L),
-    nb_getval(checkresult,S),
-    save_preference(user_genre,L, S),
+    number_string(ConvertedOption, Option),
+    checkinput(ConvertedOption, GenreList),
+    nb_getval(checkresult, SelectedGenre),
+    save_preference(user_genre, GenreList, SelectedGenre),
     clear.
 
 menu_publisher:-
