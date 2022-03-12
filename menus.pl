@@ -2,6 +2,7 @@
 :- [utils].
 
 game_recomendation :- 
+    clear,
     write('\n========== Menu de Indicação de jogos ======='),nl,
     write('[1] - Recomendação por preferencias'),nl,
     /*write('[2] - Recomendação por signo'),nl,*/
@@ -35,6 +36,7 @@ main_menu:-
     ).
 
 menu_category:-
+    clear,
     write('Selecione a categoria'),nl,
     setof(X,category(X),L),
     (display(L,0);true),
@@ -48,6 +50,7 @@ menu_category:-
     clear.
 
 menu_genre:-
+    clear,
     write('Selecione o genero'),nl,
     setof(X,genre(X),L),
     (display(L,0);true),
@@ -61,6 +64,7 @@ menu_genre:-
     clear.
 
 menu_publisher:-
+    clear,
     write('Selecione o Editora'),nl,
     setof(X,publisher(X),L),
     (display(L,0);true),
@@ -75,6 +79,7 @@ menu_publisher:-
     clear.
 
 menu_developer:-
+    clear,
     write('Selecione o desenvolvedor'),nl,
     setof(X,developer(X),L),
     (display(L,0);true),
