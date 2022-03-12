@@ -38,15 +38,15 @@ main_menu:-
 menu_category:-
     clear,
     write('Selecione a categoria'),nl,
-    setof(X,category(X),L),
-    (display(L,0);true),
+    setof(CategoryName, category(CategoryName), CategoryList),
+    (display(CategoryList, 0) ; true),
     write('--------------------------------------'),nl,
     write('Digite o numero da categoria'),nl,
     read_string(user, "\n", "\r", _, Option),
-    number_string(X, Option),
-    checkinput(X,L),
-    nb_getval(checkresult,S),
-    save_preference(user_category,L, S),
+    number_string(ConvertedOption, Option),
+    checkinput(ConvertedOption,CategoryList),
+    nb_getval(checkresult, SelectedCategory),
+    save_preference(user_category, CategoryList, SelectedCategory),
     clear.
 
 menu_genre:-
