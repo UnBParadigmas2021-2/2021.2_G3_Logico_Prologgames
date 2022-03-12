@@ -33,8 +33,11 @@ display([H|T],A):-
     nl,
     display(T,M).
 
-% Verifica se a escolha do usuário está dentro dos limites das listas
+% Verifica se a escolha do usuário está dentro dos limites das listas (Tem que ser maior que -1 e menor que o limite da lista)
 
-checkinput(A,L):-
-    length(L,Len),
-    ( A>Len ->(write('Digite um numero valido: '),read(D),checkinput(D,L) ) ; (nb_setval(checkresult,A),nl) ).
+
+checkinput(Input, List):-
+    length(List, Length),
+    write('cheguei aqui'),
+    (Input > Length ; Input < (Length - Length) -> (write('Digite um numero valido: '), read(Newinput), checkinput(Newinput,List)) ; 
+    (nb_setval(checkresult, Input) , nl)).
