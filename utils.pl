@@ -38,6 +38,10 @@ display([H|T],A):-
 
 checkinput(Input, List):-
     length(List, Length),
-    write('cheguei aqui'),
     (Input > Length ; Input < (Length - Length) -> (write('Digite um numero valido: '), read(Newinput), checkinput(Newinput,List)) ; 
     (nb_setval(checkresult, Input) , nl)).
+
+print_list([]).
+print_list([Head|Tail]):-
+    show_game_as_list_item(Head),
+    print_list(Tail).
