@@ -28,6 +28,15 @@ show_dev_recomendations:-
     nl, write("Pressione ENTER para retornar ao menu..."), nl,
     get_char(_).
 
+list_all_games:-
+    save_preference(user_developer,_, 0),
+    findall(X, find_games_by_developer(X), RecommendationList),
+    write("Aqui estão todos os jogos da Steam: "), nl, nl,
+    sort(RecommendationList, SortedList),
+    print_list(SortedList),
+    nl, write("Pressione ENTER para retornar ao menu..."), nl,
+    get_char(_).
+
  /* game(steam_id, 
             name, 
             developers, 
