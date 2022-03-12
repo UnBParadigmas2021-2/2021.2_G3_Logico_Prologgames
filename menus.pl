@@ -100,7 +100,9 @@ game_details(GameID) :-
     write("Nome:"),nl,
     write(Name),nl,
     write("Descrição:"),nl,
-    write(Description), nl.
+    write(Description), nl,
+    nl, write("Pressione ENTER para retornar ao menu..."), nl,
+    get_char(_).
 
 /*
 explore_recommandations(Id, Name) :-
