@@ -25,6 +25,7 @@ game_list :-
     write('\n========== Menu de Listagem de jogos ======='),nl,
     write('[1] - Listar por desenvolvedor'),nl,
     write('[2] - Listar todos os games'),nl,
+    write('[3] - Listar todos os games'),nl,
     write('[0] - Voltar ao Menu Inicial'),nl,
     read_string(user, "\n", "\r", _, Option),
         switch(
@@ -32,6 +33,7 @@ game_list :-
         [
             "1" : by_developer,
             "2" : list_all_games,
+            "3" : by_genre,
             "0" : main_menu
         ],
         game_list
