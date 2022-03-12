@@ -11,6 +11,9 @@ preferences:-
     menu_publisher,
     show_recommendation.
 
+random_recomendation:-
+    show_random_recomendation.
+
 by_developer:-
     menu_developer,
     show_dev_recomendations.
@@ -22,6 +25,13 @@ by_genre:-
 show_recommendation:-
     findall(X, find_games(X), RecommendationList),
     nth0(0, RecommendationList, Id),
+    game_details(Id).
+
+show_random_recomendation:-
+    random_between(0,99,RandonIndex),
+    save_preference(user_developer,_, 0),
+    findall(X, find_games_by_developer(X), RecommendationList),
+    nth0(RandonIndex, RecommendationList, Id),
     game_details(Id).
 
 show_dev_recomendations:-

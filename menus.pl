@@ -5,7 +5,6 @@ game_recomendation :-
     clear,
     write('\n========== Menu de Indicação de jogos ======='),nl,
     write('[1] - Recomendação por preferencias'),nl,
-    write('[2] - Listar por desenvolvedor'),nl,
     /*write('[2] - Recomendação por signo'),nl,*/
     write('[0] - Voltar ao Menu Inicial'),nl,
     read_string(user, "\n", "\r", _, Option),
@@ -13,7 +12,6 @@ game_recomendation :-
         Option, 
         [
             "1" : preferences,
-            "2" : by_developer,
             "3" : exit,
             "0" : main_menu
         ],
