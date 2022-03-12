@@ -1,7 +1,7 @@
 :- [facts].
 :- [utils].
 
-game_recomendation :- 
+game_recommendation :- 
     clear,
     write('\n========== Menu de Indicação de jogos ======='),nl,
     write('[1] - Recomendação por preferencias'),nl,
@@ -13,11 +13,11 @@ game_recomendation :-
         Option, 
         [
             "1" : preferences,
-            "2" : random_recomendation,
+            "2" : random_recommendation,
             "3" : exit,
             "0" : main_menu
         ],
-        game_recomendation
+        game_recommendation
     ).
 
 game_list :- 
@@ -50,7 +50,7 @@ main_menu:-
     switch(
         Option, 
         [
-            "1" : game_recomendation,
+            "1" : game_recommendation,
             "2" : game_list,
             "0" : exit
         ],

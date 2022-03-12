@@ -11,12 +11,12 @@ preferences:-
     menu_publisher,
     show_recommendation.
 
-random_recomendation:-
-    show_random_recomendation.
+random_recommendation:-
+    show_random_recommendation.
 
 by_developer:-
     menu_developer,
-    show_dev_recomendations.
+    show_dev_recommendations.
 
 by_genre:-
     menu_genre,
@@ -27,14 +27,14 @@ show_recommendation:-
     nth0(0, RecommendationList, Id),
     game_details(Id).
 
-show_random_recomendation:-
+show_random_recommendation:-
     random_between(0,99,RandonIndex),
     save_preference(user_developer,_, 0),
     findall(X, find_games_by_developer(X), RecommendationList),
     nth0(RandonIndex, RecommendationList, Id),
     game_details(Id).
 
-show_dev_recomendations:-
+show_dev_recommendations:-
     findall(X, find_games_by_developer(X), RecommendationList),
     write("Aqui estão os jogos deste desenvolvedor:"), nl, nl,
     sort(RecommendationList, SortedList),
