@@ -81,16 +81,16 @@ menu_publisher:-
 menu_developer:-
     clear,
     write('Selecione o desenvolvedor'),nl,
-    setof(X,developer(X),L),
-    (display(L,0);true),
+    setof(DeveloperName, developer(DeveloperName), DeveloperList),
+    (display(DeveloperList, 0) ; true),
     write('0 - Nao especificar'),nl,
     write('--------------------------------------'),nl,
     write('Digite o numero referente ao desenvolvedor'),nl,
     read_string(user, "\n", "\r", _, Option),
-    number_string(X, Option),
-    checkinput(X,L),
-    nb_getval(checkresult,S),
-    save_preference(user_developer,L, S),
+    number_string(ConvertedOption, Option),
+    checkinput(ConvertedOption,DeveloperList),
+    nb_getval(checkresult, SelectedDeveloper),
+    save_preference(user_developer,DeveloperList, SelectedDeveloper),
     clear.
 
 game_details(Id) :- 
