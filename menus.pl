@@ -123,7 +123,7 @@ game_details(GameID) :-
     get_char(_).
 
 show_game_as_list_item(GameID) :- 
-    game(GameID, Name, Dev, _, _, Cat, Gen, _, _, _), 
+    game(GameID, Name, _, _, _, Cat, Gen, _, _, _), 
     format('Nome: ~w', Name), nl,
     format('Genêro (s): ~w', [Gen]), nl,
     format('Categoria (s): ~w', [Cat]), nl, nl, nl.
