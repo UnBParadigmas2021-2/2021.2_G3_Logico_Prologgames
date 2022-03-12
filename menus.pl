@@ -93,8 +93,8 @@ menu_developer:-
     save_preference(user_developer,DeveloperList, SelectedDeveloper),
     clear.
 
-game_details(Id) :- 
-    game(Id,Name, _, _, _, _, _, _, _,Description), 
+game_details(GameID) :- 
+    game(GameID, Name, _, _, _, _, _, _, _, Description), 
     clear,
     write("========== JOGO RECOMENDADO =========="),nl,
     write("Nome:"),nl,
