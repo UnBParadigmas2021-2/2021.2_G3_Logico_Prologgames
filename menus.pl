@@ -66,16 +66,16 @@ menu_genre:-
 menu_publisher:-
     clear,
     write('Selecione o Editora'),nl,
-    setof(X,publisher(X),L),
-    (display(L,0);true),
+    setof(PublisherName, publisher(PublisherName), PublisherList),
+    (display(PublisherList, 0) ; true),
     write('0 - Nao especificar'), nl,
     write('--------------------------------------'),nl,
     write('Digite o numero da editora'),nl,
     read_string(user, "\n", "\r", _, Option),
-    number_string(X, Option),
-    checkinput(X,L),
-    nb_getval(checkresult,S),
-    save_preference(user_publisher,L, S),
+    number_string(ConvertedOption, Option),
+    checkinput(ConvertedOption, PublisherList),
+    nb_getval(checkresult, SelectedPublisher),
+    save_preference(user_publisher, PublisherList, SelectedPublisher),
     clear.
 
 menu_developer:-
