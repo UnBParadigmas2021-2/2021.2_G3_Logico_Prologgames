@@ -15,6 +15,10 @@ by_developer:-
     menu_developer,
     show_dev_recomendations.
 
+by_genre:-
+    menu_genre,
+    list_genre_games.
+
 show_recommendation:-
     findall(X, find_games(X), RecommendationList),
     nth0(0, RecommendationList, Id),
@@ -23,6 +27,14 @@ show_recommendation:-
 show_dev_recomendations:-
     findall(X, find_games_by_developer(X), RecommendationList),
     write("Aqui estão os jogos deste desenvolvedor:"), nl, nl,
+    sort(RecommendationList, SortedList),
+    print_list(SortedList),
+    nl, write("Pressione ENTER para retornar ao menu..."), nl,
+    get_char(_).
+
+list_genre_games:-
+    findall(X, find_games_by_genre(X), RecommendationList),
+    write("Aqui estão os jogos deste genero:"), nl, nl,
     sort(RecommendationList, SortedList),
     print_list(SortedList),
     nl, write("Pressione ENTER para retornar ao menu..."), nl,
@@ -62,3 +74,7 @@ find_games(Id):- game(Id, _, Dev,Pub, _, Cat, Gen, _, _, _),
 find_games_by_developer(Id):- game(Id, _, Dev,_, _, _, _, _, _, _), 
     nb_getval(user_developer, Selected_developer),
     member(Selected_developer, Dev).
+
+find_games_by_genre(Id):- game(Id, _, _,_, _, _, Gen, _, _, _), 
+    nb_getval(user_genre, Selected_genre),
+    member(Selected_genre, Gen).
