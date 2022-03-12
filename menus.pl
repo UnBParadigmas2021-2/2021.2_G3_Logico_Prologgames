@@ -2,6 +2,7 @@
 :- [utils].
 
 game_recomendation :- 
+    clear,
     write('\n========== Menu de Indicação de jogos ======='),nl,
     write('[1] - Recomendação por preferencias'),nl,
     /*write('[2] - Recomendação por signo'),nl,*/
@@ -35,61 +36,65 @@ main_menu:-
     ).
 
 menu_category:-
+    clear,
     write('Selecione a categoria'),nl,
-    setof(X,category(X),L),
-    (display(L,0);true),
+    setof(CategoryName, category(CategoryName), CategoryList),
+    (display(CategoryList, 0) ; true),
     write('--------------------------------------'),nl,
     write('Digite o numero da categoria'),nl,
     read_string(user, "\n", "\r", _, Option),
-    number_string(X, Option),
-    checkinput(X,L),
-    nb_getval(checkresult,S),
-    save_preference(user_category,L, S),
+    number_string(ConvertedOption, Option),
+    checkinput(ConvertedOption,CategoryList),
+    nb_getval(checkresult, SelectedCategory),
+    save_preference(user_category, CategoryList, SelectedCategory),
     clear.
 
 menu_genre:-
+    clear,
     write('Selecione o genero'),nl,
-    setof(X,genre(X),L),
-    (display(L,0);true),
+    setof(GenreName, genre(GenreName), GenreList),
+    (display(GenreList, 0) ; true),
     write('--------------------------------------'),nl,
     write('Digite o numero do genero'),nl,
     read_string(user, "\n", "\r", _, Option),
-    number_string(X, Option),
-    checkinput(X,L),
-    nb_getval(checkresult,S),
-    save_preference(user_genre,L, S),
+    number_string(ConvertedOption, Option),
+    checkinput(ConvertedOption, GenreList),
+    nb_getval(checkresult, SelectedGenre),
+    save_preference(user_genre, GenreList, SelectedGenre),
     clear.
 
 menu_publisher:-
+    clear,
     write('Selecione o Editora'),nl,
-    setof(X,publisher(X),L),
-    (display(L,0);true),
+    setof(PublisherName, publisher(PublisherName), PublisherList),
+    (display(PublisherList, 0) ; true),
     write('0 - Nao especificar'), nl,
     write('--------------------------------------'),nl,
     write('Digite o numero da editora'),nl,
     read_string(user, "\n", "\r", _, Option),
-    number_string(X, Option),
-    checkinput(X,L),
-    nb_getval(checkresult,S),
-    save_preference(user_publisher,L, S),
+    number_string(ConvertedOption, Option),
+    checkinput(ConvertedOption, PublisherList),
+    nb_getval(checkresult, SelectedPublisher),
+    save_preference(user_publisher, PublisherList, SelectedPublisher),
     clear.
 
 menu_developer:-
+    clear,
     write('Selecione o desenvolvedor'),nl,
-    setof(X,developer(X),L),
-    (display(L,0);true),
+    setof(DeveloperName, developer(DeveloperName), DeveloperList),
+    (display(DeveloperList, 0) ; true),
     write('0 - Nao especificar'),nl,
     write('--------------------------------------'),nl,
     write('Digite o numero referente ao desenvolvedor'),nl,
     read_string(user, "\n", "\r", _, Option),
-    number_string(X, Option),
-    checkinput(X,L),
-    nb_getval(checkresult,S),
-    save_preference(user_developer,L, S),
+    number_string(ConvertedOption, Option),
+    checkinput(ConvertedOption,DeveloperList),
+    nb_getval(checkresult, SelectedDeveloper),
+    save_preference(user_developer,DeveloperList, SelectedDeveloper),
     clear.
 
-game_details(Id) :- 
-    game(Id,Name, _, _, _, _, _, _, _,Description), 
+game_details(GameID) :- 
+    game(GameID, Name, _, _, _, _, _, _, _, Description), 
     clear,
     write("========== JOGO RECOMENDADO =========="),nl,
     write("Nome:"),nl,
