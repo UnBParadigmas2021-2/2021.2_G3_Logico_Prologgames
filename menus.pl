@@ -129,9 +129,13 @@ game_details(GameID) :-
 show_game_as_list_item(GameID) :- 
     game(GameID, Name, _, _, _, Cat, Gen, _, _, _), 
     format('Nome: ~w', Name), nl,
-    format('Genêro (s): ~w', [Gen]), nl,
+    format('Gênero (s): ~w', [Gen]), nl,
     format('Categoria (s): ~w', [Cat]), nl, nl, nl.
 
+show_error :-
+    write("Não foi encontrado nenhum jogo com os filtros selecionados."),nl,nl,
+    write("Pressione ENTER para retornar ao menu..."), nl,
+    get_char(_).
 
 /*
 explore_recommandations(Id, Name) :-

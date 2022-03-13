@@ -25,7 +25,8 @@ by_genre:-
 show_recommendation:-
     findall(X, find_games(X), RecommendationList),
     nth0(0, RecommendationList, Id),
-    game_details(Id).
+    game_details(Id);
+    show_error.
 
 show_random_recommendation:-
     random_between(0,99,RandonIndex),
