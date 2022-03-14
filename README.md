@@ -36,13 +36,16 @@ Utilizando uma base de dados pública, é possível saber quais jogos o sistema 
 ## Screenshots
 
 Tela do menu principal da aplicação
-![Menu principal](/Media/menuprincipal.jpeg) 
+
+![Menu principal](media/menuprincipal.jpeg) 
 
 Tela do menu de recomendação
-![Menu recomendacao](/Media/menuindicacao.jpeg) 
+
+![Menu recomendacao](media/menuindicacao.jpeg) 
 
 Tela da recomendação
-![Recomendacao](/Media/recomendacao.jpeg) 
+
+![Recomendacao](media/recomendacao.jpeg) 
 
 ## Instalação 
 **Linguagem**: Prolog <br>
