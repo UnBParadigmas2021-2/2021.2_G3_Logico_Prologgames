@@ -1,51 +1,72 @@
-# RepositorioTemplate
-Esse repositório é para ser utilizado pelos grupos como um template inicial, da home page do Projeto.
-
-**!! *Atenção: Renomeie o seu repositório para (Ano.Semestre)_(Grupo)_(Paradigma)_(NomeDoProjeto)*. !!** 
-
-Paradigmas:
- - Funcional
- - Logico
- - SMA
-
-**!! *Não coloque os nomes dos alunos no título do repositório*. !!**
-
-**!! *Exemplo de título correto: 2021.2_G1_Logico_ProjetoRoteirosAereos*. !!**
- 
- (Apague essa seção)
-
 # NomeDoProjeto
 
-**Disciplina**: FGA0210 - PARADIGMAS DE PROGRAMAÇÃO - T01 <br>
-**Nro do Grupo**: XX<br>
-**Paradigma**: XXXXXXXXXX<br>
+**Disciplina**: FGA0210 - PARADIGMAS DE PROGRAMAÇÃO <br>
+**Nro do Grupo**: 03<br>
+**Paradigma**: Lógico<br>
 
 ## Alunos
-|Matrícula | Aluno |
-| -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+
+| Matrícula  | Aluno                           |
+| ---------- | ------------------------------- |
+| 19/0063441 | Ana Carolina Carvalho da Silva  |
+| 18/0113151 | Eduardo Nunes Picolo            |
+| 18/0113861 | Kleidson Alves Corrêa           |
+| 18/0125770 | Lucas Gabriel Bezerra           |
+| 18/0114077 | Lucas Rodrigues Fonseca         |
+| 18/0106970 | Matheus Gabriel Alves Rodrigues |
+| 18/0129058 | Paulo Victor da Silva           |
+| 18/0129287 | Pedro Henrique Vieira Lima      |
+| 18/0130722 | Samuel Nogueira                 |
 
 ## Sobre 
-Descreva o seu projeto em linhas gerais. 
+A fim de ajudar milhares de jogadores ao redor do mundo, foi desenvolvido o Steam Seeker. O Steam Seeker é um sistema de recomendações de jogos que estão registrados na plataforma da Steam. O sistema faz não apenas recomendação, mas também organiza a listagem dos jogos.
+Utilizando uma base de dados pública, é possível saber quais jogos o sistema deve recomendar. 
+
+## Requisitos
+
+
+| ID    | Requisito           | Descrição                                                                                                                                                                   |
+| ----- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| RF001 | Recomendar por preferência | Baseado nas escolhas do usuário em Categoria, Gênero, Desenvolvedora, Editora recomendar um jogo |
+| RF002 | Recomendar aleatoriamente    | Recomendar um jogo de forma aleatória sem preferências |
+| RF003 | Listar por desenvolvedor | Listar os jogos organizando por desenvolvedor |
+| RF004 | Listar todos os jogos      | Listar todos os jogos disponíveis |
+| RF005 | Listar por gênero  | Listar os jogos organizando por gênero |
 
 ## Screenshots
-Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
+
+Tela do menu principal da aplicação
+![Menu principal](/Media/menuprincipal.jpeg) 
+
+Tela do menu de recomendação
+![Menu recomendacao](/Media/menuindicacao.jpeg) 
+
+Tela da recomendação
+![Recomendacao](/Media/recomendacao.jpeg) 
 
 ## Instalação 
-**Linguagens**: xxxxxx<br>
-**Tecnologias**: xxxxxx<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
-Insira um manual ou um script para auxiliar ainda mais.
+**Linguagem**: Prolog <br>
+**Tecnologia**: SWI-Prolog v7.6.4 <br>
+
+Para rodar a aplicação é necessário instalar o SWI-Prolog.
 
 ## Uso 
-Explique como usar seu projeto, caso haja algum passo a passo após o comando de execução.
+No terminal:
 
-## Vídeo
-Adicione 1 ou mais vídeos com a execução do projeto.
-
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas a seguir.
+``` shell
+cd 2021.2_G3_Logico_Prologgames
+```
+```prolog
+prolog
+```
+Dentro do console:
+```prolog
+[main, facts, menus, utils].
+```
+```prolog
+start.
+```
 
 ## Fontes
-Caso utilize materiais de terceiros, referencie-os adequadamente.
+Fonte da base de dados utilizada
+https://www.kaggle.com/nikdavis/steam-store-games
