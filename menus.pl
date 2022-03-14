@@ -6,7 +6,6 @@ game_recommendation :-
     write('\n========== Menu de Indicação de jogos ======='),nl,
     write('[1] - Recomendação por preferencias'),nl,
     write('[2] - Recomendação aleatória'),nl,
-    /*write('[2] - Recomendação por signo'),nl,*/
     write('[0] - Voltar ao Menu Inicial'),nl,
     read_string(user, "\n", "\r", _, Option),
         switch(
@@ -44,7 +43,6 @@ main_menu:-
     write('=========== Bem vindo ao Steam Seeker ========='),nl,
     write('[1] - Me indique um jogo'),nl,
     write('[2] - Liste jogos'),nl,
-    /*write('[2] - Adicionar um jogo a base'),nl,*/
     write('[0] - Encerrar programa'),nl,
     read_string(user, "\n", "\r", _, Option),
     switch(
@@ -137,20 +135,4 @@ show_error :-
     write("Pressione ENTER para retornar ao menu..."), nl,
     get_char(_).
 
-/*
-explore_recommandations(Id, Name) :-
-    clear,
-    write('\n==============Jogo Recomendado============='), nl,
-    write(Name), nl,
-    write('[1] - Selecionar esse jogo'),nl,
-    write('[2] - Proximo jogo'),nl,
-    read_string(user, "\n", "\r", _, Option),
-     switch(
-        Option, 
-        [
-            "1" : game_details(Id),
-            "2" : fail
-        ],
-        explore_recommandations(Id, Name)
-    ).
-*/
+
