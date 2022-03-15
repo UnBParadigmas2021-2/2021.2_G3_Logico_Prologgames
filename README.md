@@ -85,7 +85,7 @@ Para navegar pelo programa basta escolher o número conforme a sua opção indic
 
 ## Video
 
-[![SteamSeeker](https://youtu.be/owjsSymbKQ0)](https://youtu.be/owjsSymbKQ0)
+[![SteamSeeker](https://img.youtube.com/vi/owjsSymbKQ0/0.jpg)](https://youtu.be/owjsSymbKQ0)
 [Link](https://youtu.be/owjsSymbKQ0)
 
 
