@@ -51,25 +51,48 @@ Tela da recomendação
 **Linguagem**: Prolog <br>
 **Tecnologia**: SWI-Prolog v7.6.4 <br>
 
-Para rodar a aplicação é necessário instalar o SWI-Prolog.
+**Pré-requisitos** para rodar o Steam Seeker:
+- SWI-Prolog v7.6.4
 
-## Uso 
-No terminal:
+**Instalando SWI-Prolog**
+
+- No Ubuntu e similares:
 
 ``` shell
-cd 2021.2_G3_Logico_Prologgames
+sudo apt-add-repository ppa:swi-prolog/stable
+sudo apt-get update
+sudo apt-get install swi-prolog
 ```
-```prolog
-prolog
+
+- Para instalar nos demais Sistemas Operacionais consulte: https://www.swi-prolog.org/download/stable
+
+**Instalando Steam Seeker**
+``` shell
+git clone https://github.com/UnBParadigmas2021-2/2021.2_G3_Logico_SteamSeeker.git
+cd 2021.2_G3_Logico_SteamSeeker
+```
+## Uso 
+No terminal, vá para o diretório 2021.2_G3_Logico_SteamSeeker:
+``` shell
+swipl main.pl
 ```
 Dentro do console:
-```prolog
-[main, facts, menus, utils].
-```
+
 ```prolog
 start.
 ```
+Para navegar pelo programa basta escolher o número conforme a sua opção indicada em texto.
+
+[![SteamSeeker](https://youtu.be/owjsSymbKQ0)](https://youtu.be/owjsSymbKQ0)
+[Link](https://youtu.be/owjsSymbKQ0)
+
 
 ## Fontes
-Fonte da base de dados utilizada
+- Fonte da base de dados utilizada
 https://www.kaggle.com/nikdavis/steam-store-games
+
+- Fonte para aprendizagem de prolog https://www.swi-prolog.org/
+
+- Projetos que nos inpiraram:
+    - https://github.com/UnBParadigmas2020-2/2020.2_G1_Logico_Prologfy
+    -  https://github.com/Ranim1997/Movie-Recommendation-System-Prolog/blob/master/movielovers.pl
