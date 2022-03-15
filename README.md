@@ -1,4 +1,4 @@
-# NomeDoProjeto
+# Steam Seeker
 
 **Disciplina**: FGA0210 - PARADIGMAS DE PROGRAMAÇÃO <br>
 **Nro do Grupo**: 03<br>
