@@ -83,6 +83,8 @@ start.
 ```
 Para navegar pelo programa basta escolher o número conforme a sua opção indicada em texto.
 
+## Video
+
 [![SteamSeeker](https://youtu.be/owjsSymbKQ0)](https://youtu.be/owjsSymbKQ0)
 [Link](https://youtu.be/owjsSymbKQ0)
 
